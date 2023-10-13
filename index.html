@@ -1,0 +1,131 @@
+<html>
+
+<title>Asteroids</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- HTML -->
+<body>
+  <canvas id="start-game" style="display:none"></canvas>
+  <div id="outer-container-id" class='outer-container'>
+      <div id='game-options' class='game-window'>
+        
+        <!-- Main Menu -->
+        <div class="clear-div" id="landing-page">
+          <div id="landing-header">
+            <img src="./src/asteroid.png">
+            <span class="centerText">Asteroids</span>
+            <img src="./src/asteroid.png">
+          </div>
+          <div class="clear-div">
+            <button onclick="window.frontend.playGameClick()">Play game!</button>
+          </div>
+          <div class="clear-div"> 
+            <button onclick="setting_click()">Settings</button>
+          </div>
+        </div>
+        
+        <!-- Settings -->
+        <div id="settings-popup">
+          <div id="settings-title">
+            <b>Settings</b> <br>
+          </div>
+          <div id="volume">
+            <b>Volume:</b> <span id="volume-value"></span>
+            <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider" oninput="window.frontend.setVolume()">
+          </div>
+          <div id="difficulty">
+            <b>Difficulty</b> <br>
+            <button id="button-easy" onclick="window.frontend.setDifficultyToEasy()">Easy</button>
+            <button id="button-medium" onclick="window.frontend.setDifficultyToMedium()">Normal</button>
+            <button id="button-hard" onclick="window.frontend.setDifficultyToHard()">Hard</button>
+          </div>
+          <div id="close-menu">
+            <button onclick="setting_close()">Close</button>
+          </div>
+        </div>
+
+        <!-- Tutorial -->
+
+        <!-- Actual Game -->
+        <div id="actual_game">
+          <div class="asteroidSection">
+              <div class="curAstroid"> </div>
+          </div>
+          <div id="game_right_section">
+              <div id="scoreword">
+                  SCORE
+                  <div id="score_num">0</div>
+              </div>
+              <div id="danger">DANGER
+              <div id="danger_num"></div></div>
+              <div id="level">LEVEL
+              <div id="level_num"></div></div>
+          </div>
+        </div>    
+      </div> <!-- end game-window -->
+  </div> <!-- end outer-container -->
+
+  <!-- How to Play -->
+  <div class="howToPlay" id="how-to-play-page" style="display:none;">
+    <div id="how-to-play">
+      <b>How to play</b>
+    </div>
+    <div id="instructions">
+      <b>Avoid</b> <i>asteroids</i>! <br>
+      <img src="./src/asteroid.png"> <br>
+      <b>Collect</b> <i>shields</i>! <b>Travel</b> through <i>portals</i> to the next level! <br>
+      <img src="./src/shield.gif"> 
+      <img src="./src/port.gif"> <br>
+      <b>Gain</b> as many <i>points</i> as possible!
+    </div>
+    <div class="howToPlay">
+      <button onclick="window.frontend.startGameClick()">Start</button>
+    </div>
+  </div>
+
+  <!-- Get Ready Splash Screen -->
+  <div class="getReady" id="get-ready-page" style="display:none;">
+    <div id="score-board-initial">
+      SCORE <br> <label id = "score"> 0 </label> <br>
+      DANGER <br> <label id="danger"> 20 </label> <br>
+      LEVEL <br> <label id="level"> 1 </level> <br>
+    </div>
+    <div id="get-ready">
+      <b>Get Ready!</b>
+    </div>
+    <div id="arrow-key-instructions">
+      <img src="./src/arrowkeys.png"> <br>
+      Use arrow keys to move. 
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div class="gameOver" id="game-over-page" style="display:none;">
+    <div id="exit-header">
+      <img src="./src/asteroid.png">
+      <span class="centerText">Asteroids</span>
+      <img src="./src/asteroid.png">
+    </div>
+    <div id="game-over-box">
+      GAME OVER! <br> YOU HAVE TO FIX YOUR SPACESHIP! <br> (score) <br>
+      <button onclick="window.frontend.startOverClick()">Start Over</button>
+    </div>
+  </div>
+
+  <!-- Score Board -->
+  <div id="score-board" class="top-corner" style="display:none;">
+    SCORE <br> <label id = "score"> 0 </label> <br>
+    DANGER <br> <label id="danger"> 20 </label> <br>
+    LEVEL <br> <label id="level"> 1 </level> <br>
+  </div>
+  
+</body>
+
+</html>

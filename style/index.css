@@ -1,0 +1,306 @@
+/* Main Containers */
+body, button {
+  font-family: VT323;
+}
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+  width: 100%;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+}
+  
+/* Game Section --- Right Section */
+
+#actual_game{
+    height: 720px;
+    width: 1280px;
+    background-color: white;
+    z-index: 10;
+    right: 0px;
+    top: 0px;
+
+}
+
+#game_right_section {
+    height: 600px;
+    width: 320px;
+    position: absolute;
+    left: 960px;
+    top: 0px;
+    color: black;
+    z-index: 1;
+}
+
+#scoreword, #danger, #level {
+  text-align:center;
+  font-size: 60px;
+}
+
+#score_num, #danger_num, #level_num {
+  text-align: center;
+  font-size: 40px;
+  color: darkblue;
+}
+
+#player {
+  position: absolute;
+  width: 62px;
+  left: 600px;
+  top: 300px;
+  z-index: 9;
+}
+
+.curAstroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAstroid img{
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Add your styling here */
+
+/* landing page */
+
+#landing-header {
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#landing-header img {
+  height: 100%;
+}
+
+#landing-page {
+  text-align: center;
+  background-image: url('../src/frontpage_background.jpg');
+  height: 100%;
+}
+
+#landing-page button {
+  margin-top: 100px;
+  width: 200px;
+  height: 100px;
+  background-color: darkslateblue;
+  font-size: 40px;
+  color: white;
+}
+
+/* settings */
+
+#settings-popup {
+  display: none;
+  position: absolute;
+  top: 1%;
+  left: 25%;
+  border: solid 10px white; 
+  background-color: darkslateblue;
+  font-size: 50px;
+  text-align: center;
+  height: 690px;
+  width: 600px;
+  color: white;
+}
+
+#settings-title {
+  margin-bottom: 100px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#volume {
+  margin-bottom: 50px;
+}
+
+#difficulty button {
+  width: 180px;
+  height: 100px;
+  background-color: purple;
+  font-size: 40px;
+}
+
+#difficulty button:focus {
+  border-color: yellow;
+}
+
+#close-menu button {
+  width: 180px;
+  height: 100px;
+  background-color: purple;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* how to play */
+
+#how-to-play-page {
+  text-align: center;
+  background-color: gainsboro;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#how-to-play {
+  font-size: 75px;
+  text-align: center;
+}
+
+#how-to-play-page button {
+  width: 200px;
+  height: 75px;
+  margin-bottom: 25px;
+}
+
+#instructions {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#instructions img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* get ready */
+
+#get-ready-page {
+  text-align: center;
+  height: 100%;
+}
+
+#score-board-initial {
+  font-size: 40px;
+  text-align: right;
+}
+
+#get-ready {
+  font-size: 75px;
+  margin-bottom: 50px;
+}
+
+#arrow-key-instructions {
+  font-size: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#arrow-key-instructions img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* score board */
+
+.top-corner {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 999;
+  font-size: 40px;
+  text-align: right;
+}
+
+/* game over */
+
+#exit-header {
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#exit-header img {
+  height: 100%;
+}
+
+#game-over-page {
+  text-align: center;
+  background-image: url('../src/frontpage_background.jpg');
+  height: 100%;
+}
+
+#game-over-box {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  background-color: darkslateblue;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
